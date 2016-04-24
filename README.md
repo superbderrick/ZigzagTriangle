@@ -1,7 +1,6 @@
 # ZigzagTriangle
-The project is just  to learn opengl 2.0 with swift.I am going to use many open sources and tutorial sites to understand opengl.
+The project is just  to learn opengl 2.0 with swift.I am going to use many open sources and tutorial sites to understand opengl ,If it is copyright's problem contact to me.
 
-If it is copyright's problem contact to me.
 kang.derrick@gamil.com
 
 Ray Wenderlich License
