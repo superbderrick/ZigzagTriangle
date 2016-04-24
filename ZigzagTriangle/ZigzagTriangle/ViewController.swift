@@ -18,15 +18,40 @@ class ViewController: GLKViewController {
   var vertexBuffer : GLuint = 0
   
   let vertices : [Vertex] = [
+    //center.
     Vertex( 0.0,  0.25, 0.0),    // TOP
     Vertex(-0.25, 0.0, 0.0),    // LEFT
     Vertex( 0.25, 0.0, 0.0),    // RIGHT
+
+    Vertex( 0.0,  -0.25, 0.0),  // Bottom
+    Vertex(-0.25, 0.0, 0.0),    // LEFT
+    Vertex( 0.25, 0.0, 0.0),    // RIGHT
+    
+    //Right.
+    Vertex( 0.25,  0.0, 0.0),    // LEFT
+    Vertex(0.50, 0.25, 0.0),    // Top.
+    Vertex( 0.75, 0.0, 0.0),    // Right.
+    
+    Vertex( 0.25,  0.0, 0.0),    // LEFT
+    Vertex(0.50, -0.25, 0.0),    // Bottom.
+    Vertex( 0.75, 0.0, 0.0),    // Right.
+    
+    //Left
+    Vertex(-0.25,  0.00, 0.0),    // Left
+    Vertex(-0.50, 0.25, 0.0),    // Top.
+    Vertex( -0.75, 0.0, 0.0),    // Right.
+    
+    Vertex( -0.25,  0.0, 0.0),    // LEFT
+    Vertex(-0.50, -0.25, 0.0),    // Bottom.
+    Vertex( -0.75, 0.0, 0.0),    // Right.
+
+    
+    
+    
+
   ]
   
   let Secondvertices : [Vertex] = [
-    Vertex( 0.0,  -0.25, 0.0),    // Bottom
-    Vertex(-0.25, -0.25, 0.0),    // LEFT
-    Vertex( 0.25, -0.25, 0.0),    // RIGHT
     
   ]
   
@@ -56,10 +81,11 @@ class ViewController: GLKViewController {
       GLsizei(sizeof(Vertex)), nil)
     
     glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertexBuffer)
-    glDrawArrays(GLenum(GL_TRIANGLES), 0, 3)
+    glDrawArrays(GLenum(GL_TRIANGLES), 0, GLsizei(vertices.count))
+    
+    
     
     glDisableVertexAttribArray(VertexAttributes.VertexAttribPosition.rawValue)
-    
   }
 
   

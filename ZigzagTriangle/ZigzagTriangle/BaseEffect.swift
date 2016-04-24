@@ -2,8 +2,8 @@
 //  GLBaseEffect.swift
 //  Triangle
 //
-//  Created by burt on 2016. 2. 25..
-//  Copyright © 2016년 BurtK. All rights reserved.
+//  Created by Kang Jinyeoung on 2016. 4. 24..
+//  Copyright © 2016년 SuperbDerrick. All rights reserved.
 //
 
 import Foundation
