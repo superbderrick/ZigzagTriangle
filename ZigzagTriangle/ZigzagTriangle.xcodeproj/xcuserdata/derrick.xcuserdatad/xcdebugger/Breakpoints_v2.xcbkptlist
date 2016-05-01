@@ -9,14 +9,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZigzagTriangle/ViewController.swift"
-            timestampString = "483178137.757936"
+            filePath = "ZigzagTriangle/BaseEffect.swift"
+            timestampString = "483772976.434388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "setupVertexBuffer()"
-            landmarkType = "5">
+            startingLineNumber = "1"
+            endingLineNumber = "1">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

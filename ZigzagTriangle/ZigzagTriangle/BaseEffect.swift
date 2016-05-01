@@ -18,7 +18,7 @@ class BaseEffect {
     self.compile(vertexShader: vertexShader, fragmentShader: fragmentShader)
   }
   
-  func prepareToDraw() {
+  func drawFigure() {
     glUseProgram(self.programHandle)
   }
 }
@@ -64,7 +64,6 @@ extension BaseEffect {
   }
   
   func compile(vertexShader vertexShader: String, fragmentShader: String) {
-    NSLog("%@", "shaders compile  compile !!!!")
     let vertexShaderName = self.compileShader(vertexShader, shaderType: GLenum(GL_VERTEX_SHADER))
     let fragmentShaderName = self.compileShader(fragmentShader, shaderType: GLenum(GL_FRAGMENT_SHADER))
     
@@ -73,6 +72,7 @@ extension BaseEffect {
     glAttachShader(self.programHandle, fragmentShaderName)
     
     glBindAttribLocation(self.programHandle, VertexAttributes.VertexAttribPosition.rawValue, "a_Position")
+    glBindAttribLocation(self.programHandle, VertexAttributes.Color.rawValue, "a_Color")
     glLinkProgram(self.programHandle)
     
     var linkStatus : GLint = 0

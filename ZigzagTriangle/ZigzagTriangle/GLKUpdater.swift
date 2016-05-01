@@ -21,7 +21,6 @@ class GLKUpdater: NSObject , GLKViewControllerDelegate{
   
   
   func glkViewControllerUpdate(controller: GLKViewController) {
-   //NSLog("%@", "glkViewControllerUpdate!!!!")
     
   }
 
