@@ -19,34 +19,52 @@ class ViewController: GLKViewController {
   var indexBuffer  : GLuint = 0
   
   let vertices : [Vertex] = [
-    //center  Top Triangle.
+    //center Top Triangle.
+    Vertex(-0.25,0.0 ,0.0, 0.0,0.0,1.0,1.0),    // LEFT
+    Vertex(0.0  ,0.25,0.0, 0.0,0.0,1.0,1.0),    // TOP
+    Vertex( 0.25,0.0 ,1.0, 0.0,0.0,1.0,1.0),    // RIGHT
     
-//    Vertex(0.0  , 0.25,0.0 , 0.0,0.0,1.0,1.0),    // TOP
-//    Vertex(-0.25, 0.0 ,0.0 , 0.0,0.0,1.0,1.0),    // LEFT
-//    Vertex( 0.25, 0.0 ,1.0 , 0.0,0.0,1.0,1.0),    // RIGHT
-
     //center  Bottom Triangle.
-    Vertex( 0.0 , -0.25, 0.0, 0.5,0.0,0.0,1.0),  // Bottom
-    Vertex(-0.25, 0.0  , 0.0, 0.5,0.0,0.0,1.0),    // LEFT
-    Vertex( 0.25, 0.0  , 0.0, 0.5,0.0,0.0,1.0),    // RIGHT
+    Vertex(-0.25,0.0  ,0.0, 0.0,1.0,1.0,1.0),    // LEFT
+    Vertex( 0.25,0.0  ,0.0, 1.0,0.0,1.0,1.0),    // RIGHT
+    Vertex(0.0  ,-0.25,0.0, 1.0,1.0,0.4,1.0),  // Bottom
     
-//    //Right.
-//    Vertex( 0.25,  0.0, 0.0,1.0, 0.0, 0.0, 1.0),    // LEFT
-//    Vertex(0.50, 0.25, 0.0,1.0, 0.0, 0.0, 1.0),    // Top.
-//    Vertex( 0.75, 0.0, 0.0,1.0, 0.0, 0.0, 1.0),    // Right.
-//    
-//    Vertex( 0.25,  0.0, 0.0,1.0, 0.0, 0.0, 1.0),    // LEFT
-//    Vertex(0.50, -0.25, 0.0,1.0, 0.0, 0.0, 1.0),    // Bottom.
-//    Vertex( 0.75, 0.0, 0.0,1.0, 0.0, 0.0, 1.0),    // Right.
-//    
-//    //Left
-//    Vertex(-0.25,  0.00, 0.0,1.0, 0.0, 0.0, 1.0),    // Left
-//    Vertex(-0.50, 0.25, 0.0,1.0, 0.0, 0.0, 1.0),    // Top.
-//    Vertex( -0.75, 0.0, 0.0,1.0, 0.0, 0.0, 1.0),    // Right.
-//    
-//    Vertex( -0.25,  0.0, 0.0,0.8, 0.0, 0.0, 1.0),    // LEFT
-//    Vertex(-0.50, -0.25, 0.0,0.8, 0.0, 0.0, 1.0),    // Bottom.
-//    Vertex( -0.75, 0.0, 0.0,0.8, 0.0, 0.0, 1.0),    // Right.
+    //second right
+    Vertex(0.0 ,0.25,0.0, 0.0,1.0,0.0,1.0),    // LEFT
+    Vertex(0.50,0.25,0.0, 0.0,1.0,0.0,1.0),    // TOP
+    Vertex(0.25,0.0,0.0, 0.0,1.0,0.0,1.0),    // RIGHT
+    
+    Vertex(0.0 ,-0.25,0.0, 0.98,0.0,0.0,1.0),    // LEFT
+    Vertex(0.50,-0.25,0.0, 0.88,0.0,0.6,1.0),    // TOP
+    Vertex(0.25,0.0,0.0, 0.98,1.0,1.0,1.0),    // RIGHT
+
+    
+    // second right.
+    Vertex(0.25,0.0 ,0.0, 1.0, 0.0, 0.0, 1.0),    // LEFT
+    Vertex(0.50,0.25,0.0, 1.0, 0.0, 0.0, 1.0),    // Top.
+    Vertex(0.75,0.0 ,0.0, 1.0, 0.0, 0.0, 1.0),    // Right.
+    
+    Vertex(0.25,0.0  ,0.0, 0.0, 0.3, 1.0, 1.0),    // LEFT
+    Vertex(0.50,-0.25,0.0, 1.0, 0.5, 0.02, 1.0),    // Bottom.
+    Vertex(0.75,0.0  ,0.0, 1.0, 1.0, 0.0, 1.0),    // Right.
+    
+    //left
+    Vertex(-0.0 ,0.25,0.0, 0.0,1.0,0.0,1.0),    // LEFT
+    Vertex(-0.50,0.25,0.0, 0.0,1.0,0.0,1.0),    // TOP
+    Vertex(-0.25,0.0,0.0, 0.0,1.0,0.0,1.0),    // RIGHT
+    
+    Vertex(-0.0 ,-0.25,0.0, 0.98,0.0,1.0,1.0),    // LEFT
+    Vertex(-0.50,-0.25,0.0, 0.98,0.0,0.0,1.0),    // TOP
+    Vertex(-0.25,0.0,0.0, 0.58,1.0,0.0,1.0),    // RIGHT
+    
+    //second left
+    Vertex(-0.25,0.00,0.0, 1.0, 0.0, 0.0, 1.0),    // Left
+    Vertex(-0.50,0.25,0.0, 1.0, 0.0, 0.0, 1.0),    // Top.
+    Vertex(-0.75,0.0 ,0.0, 1.0, 0.0, 0.0, 1.0),    // Right.
+    
+    Vertex(-0.25,0.0  ,0.0, 0.0, 1.0, 1.0, 1.0),    // LEFT
+    Vertex(-0.50,-0.25,0.0, 1.0, 0.0, 0.0, 1.0),    // Bottom.
+    Vertex(-0.75,0.0  ,0.0, 1.0, 0.4, 1.0, 1.0),    // Right.
 
   ]
   
@@ -68,7 +86,6 @@ class ViewController: GLKViewController {
   override func glkView(view: GLKView, drawInRect rect: CGRect) {
     glClearColor(1.0, 1.0, 0.0, 1.0);
     glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
-    
     shader.drawFigure()
     
     glEnableVertexAttribArray(VertexAttributes.VertexAttribPosition.rawValue)
@@ -92,8 +109,6 @@ class ViewController: GLKViewController {
     glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), indexBuffer)
     glDrawArrays(GLenum(GL_TRIANGLES), 0, GLsizei(vertices.count))
     glDrawElements(GLenum(GL_TRIANGLES), GLsizei(indices.count), GLenum(GL_UNSIGNED_BYTE), nil)
-    
-    
     
     glDisableVertexAttribArray(VertexAttributes.VertexAttribPosition.rawValue)
   }
