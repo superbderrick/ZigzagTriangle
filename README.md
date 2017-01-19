@@ -1,5 +1,5 @@
 # ZigzagTriangle
-The project is justto learn opengl 2.0 with swift.
+The project is just tolearn opengl 2.0 with swift.
 Ray Wenderlich License
 
 The Ray Wenderlich License
